@@ -3,58 +3,40 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Alice", serif;
+    /* font-family: "Alice", serif; */
 }
 
 :root {
-    --main-color: #4674FF;
+    /* --main-color: #4674FF;
     --main-text-color: #000;
     --sacnd-text-color: #fff;
     --three-text-color: #44566c;
     --bg-card: #eef5fa;
-    --bg-text: #f3f2f2;
-    /* --bg-main: url('../img/bg2.jpg')no-repeat center/cover; بصي وشوفي برضو انتي زوقك جامد اوي وحلو اوي */
-    --bg-main: url('../img/bg.jpg')no-repeat center/cover; /* حاسس ان دي بناتي شويه ايه رايك */
-    /* --bg-main: linear-gradient(135deg, hsla(304, 57%, 88%, 1) 0%, hsla(254, 43%, 90%, 1) 26%, hsla(163, 43%, 92%, 1) 54%); */
+    --bg-text: #f3f2f2; */
+
+
+    --main-color: #1d4f81;
+    --main-text-color: #0a0908;
+    --sacnd-text-color: #c9c7c5;
+    --three-text-color: #6c757d;
+    --bg-card: #fff8f8;
+    --bg-text: #ffffff;
+    --bg-main: linear-gradient(135deg, #ebe9e9 0%, #a8a4a4 100%)  ;
     --shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    --boder-color: #ddeaf8
+    --boder-color: #e6e6e6;
+
 }
 
 body.dark {
-    --main-color: rgb(221, 36, 118);
-    --main-text-color: #fff;
-    --sacnd-text-color: #000;
-    --three-text-color: #a6a6a6;
-    --bg-card: #1d1d1d;
-    --bg-text: #1d1d1d;
-    /* --bg-main: url("../img/bg-dark2.jpg") no-repeat center/cover;نص ابيض ونص اسود ههههههههه انتي ايه رايك */
-    --bg-main: url("../img/bg-dark.jpg") no-repeat center/cover; /* ;دي عللي الرايق قوي */
-
-    /* والله كلو الصور حلوه بس انا بتكلم علي اللي لايقه علي الموقع */
-
-    /* انزل بقي اعمل السليدر عشان عوز انام */
-
-
-    /* --bg-main: url("../img/bg-dark1.jpg") no-repeat center/cover; ودي برضو جامده اوي شوفيها */
-    /* --bg-main: url("../img/bg-dark1.jpg") no-repeat center/cover; ودي برضو جامده اوي شوفيها */
-    --shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-    --boder-color: #2c343b
-}
-
-body.thame1 {
-    --main-color: #4674FF;
-}
-
-body.thame2 {
-    --main-color: rgb(214, 109, 95);
-}
-
-body.thame3 {
-    --main-color: #84b339;
-}
-
-body.thame4 {
-    --main-color: #45be9a;
+    --main-color: #7e9cb4;
+    --main-text-color: #fef8e8;
+    --sacnd-text-color: #161616;
+    --three-text-color: #696969;
+    --bg-card: #2C2C2C;
+    --bg-text: #222222;
+    --bg-main: #1E1E1E ;
+    --shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    --boder-color: #242424;
 }
 
 p, span {
@@ -79,17 +61,37 @@ h2::after {
     border-radius: 10px;
     background-color: var(--main-color);
 }
+
+::-webkit-scrollbar{
+    width: 15px;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--sacnd-text-color);
+    /* border-radius: 50px; */
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--main-color);
+    border-radius: 50px;
+}
 /* end all style */
+.bg{
+    background: var(--bg-main);
+    /* position: relative; */
+}
 /* start container style */
 main {
+    /* position: relative; */
     width: 100%;
-    height: 100%;
-    background: var(--bg-main)
+    min-height: 100vh;
+    max-height: 100%;
+    backdrop-filter: blur(20px);
+    font-family: "Alice", serif;
 }
 
 
 /* start main style */
 .container {
+    /* position: relative; */
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
@@ -307,8 +309,7 @@ nav .thame {
     position: relative;
 }
 
-nav .thame>button, nav .thame-box button {
-    padding: 5px 10px;
+nav button {
     background-color: var(--main-color);
     border: none;
     border-radius: 10px;
@@ -317,97 +318,15 @@ nav .thame>button, nav .thame-box button {
     font-size: 1.2rem;
     text-transform: capitalize;
     transition: .2s linear;
+    width: 50px;
+    height: 40px;
 }
 
-nav .thame>button:hover {
-    border: 2px solid var(--main-color);
+nav button:hover {
+    outline: 2px solid var(--main-color);
     background-color: transparent;
     color: var(--main-color);
 }
-
-nav .thame-box {
-    padding: 10px;
-    background-color: var(--sacnd-text-color);
-    border-radius: 10px;
-    position: absolute;
-    right: 0;
-    bottom: -155px;
-    transform: scale(.6);
-    opacity: 0;
-    visibility: hidden;
-    z-index: 999;
-    width: 170px;
-    box-shadow: var(--shadow);
-    transition: .4s linear;
-}
-
-nav .thame.open .thame-box {
-    transform: scale(1);
-    opacity: 1;
-    visibility: visible;
-}
-
-nav .thame-box::after {
-    content: "";
-    position: absolute;
-    top: -10px;
-    right: 15px;
-    width: 20px;
-    height: 20px;
-    background-color: var(--sacnd-text-color);
-    transform: rotate(135deg);
-    transition: .4s linear;
-}
-
-nav .thame-box p {
-    color: var(--main-color);
-    font-size: 1.3rem;
-    font-weight: bold;
-    text-transform: capitalize;
-
-}
-
-nav .thame-box ul {
-    display: flex;
-    list-style: none;
-    width: 100%;
-    justify-content: space-evenly;
-    padding: 0;
-}
-
-nav .thame-box ul li {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #4674FF;
-    cursor: pointer;
-}
-
-nav .thame-box ul li:nth-child(2) {
-    background-color: rgb(214, 109, 95);
-}
-
-nav .thame-box ul li:nth-child(3) {
-    background-color: #84b339;
-}
-
-nav .thame-box ul li:nth-child(4) {
-    background-color: #45be9a;
-}
-
-nav .thame-box .dark-mode {
-    gap: 10px;
-}
-
-nav .thame-box button {
-    width: 100%;
-    font-size: 1rem;
-}
-
-nav .thame-box button:first-child {
-    background-color: var(--three-text-color);
-}
-
 .menu {
     list-style: none;
     margin-top: 10px;
@@ -450,8 +369,8 @@ nav .thame-box button:first-child {
     width: 100%;
 }
 
-/* page-about */
-.page-about, .page-Resume {
+/* page */
+.page {
     display: flex;
     border-radius: 20px;
     background-color: var(--sacnd-text-color);
@@ -459,11 +378,11 @@ nav .thame-box button:first-child {
     padding: 60px 20px 20px;
 }
 
-.page-about .about, .page-Resume .Resume {
+.page {
     margin-bottom: 20px;
 }
 
-.page-about p, .page-Resume .Resume p {
+.page p {
     font-weight: 400;
     font-size: 16px;
     line-height: 27px;
@@ -471,7 +390,7 @@ nav .thame-box button:first-child {
     font-family: "Poppins", sans-serif;
 }
 
-.page-about .what-i-do h2, .page-about .what-i-do .skills-grid .skill-card h3 {
+.page h2 {
     font-size: 1.8rem;
     font-weight: bold;
     position: relative;
@@ -480,13 +399,13 @@ nav .thame-box button:first-child {
     color: var(--main-text-color);
 }
 
-.page-about .what-i-do .skills-grid {
+.page .what-i-do .skills-grid {
     row-gap: 20px;
     display: flex;
     flex-wrap: wrap;
 }
 
-.page-about .what-i-do .skills-grid .skill-card {
+.page .what-i-do .skills-grid .skill-card {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -496,23 +415,23 @@ nav .thame-box button:first-child {
     row-gap: 20px;
 }
 
-.page-about .what-i-do .skills-grid .skill-card i {
+.page .what-i-do .skills-grid .skill-card i {
     font-size: 35px;
     color: var(--main-color);
 }
 
-.page-about .what-i-do .skills-grid .skill-card h3 {
+.page .what-i-do .skills-grid .skill-card h3 {
     font-size: 1.5rem;
     color: var(--main-text-color);
 }
 
-.page-about .client {
+.page .client {
     width: 100%;
     margin-top: 30px;
     padding: 10px;
 }
 
-.page-about .client h2 {
+.page .client h2 {
     margin-bottom: 45px;
     font-size: 2rem;
     font-weight: bold;
@@ -520,7 +439,7 @@ nav .thame-box button:first-child {
     color: var(--main-text-color);
 }
 
-.page-about .client .comment-card {
+.page .client .comment-card {
     position: relative;
     width: 100%;
     background-color: var(--bg-card);
@@ -528,43 +447,43 @@ nav .thame-box button:first-child {
     padding: 20px 10px 10px 10px;
 }
 
-.page-about .comment-card img {
+.page .comment-card img {
     width: 70px;
     border-radius: 10px;
 }
 
-.page-about .comment-card .rating {
+.page .comment-card .rating {
     width: 100%;
     display: flex;
     align-items: center;
     color: rgb(252, 191, 36);
 }
 
-.page-about .comment-card .rating .date-coment {
+.page .comment-card .rating .date-coment {
     width: 100%;
     display: flex;
     margin-left: 10px;
     align-items: center;
 }
 
-.page-about .comment-card .rating .date-coment p {
+.page .comment-card .rating .date-coment p {
     margin: 0 10px 0 0;
 }
 
-.page-about .comment-card .comment-text p {
+.page .comment-card .comment-text p {
     font-size: 0.9rem;
     line-height: 20px;
     margin: 10px 0 20px 0;
 }
 
-.page-about .comment-card .comment-creator{
+.page .comment-card .comment-creator{
     display: flex;
     flex-direction: row-reverse;
     justify-content: flex-end;
     border-top: 1px solid var(--boder-color);
     padding-top: 10px;
 }
-.page-about .comment-card .comment-creator p {
+.page .comment-card .comment-creator p {
     font-size: 1.4rem;
     font-weight: bold;
     text-transform: capitalize;
@@ -574,11 +493,11 @@ nav .thame-box button:first-child {
     color: var(--main-text-color);
     margin-top: 10px;
 }
-.page-about .comment-card .comment-creator .name {
+.page .comment-card .comment-creator .name {
     margin-left: 15px;
 }
 
-.page-about .comment-card .comment-creator span {
+.page .comment-card .comment-creator span {
     text-transform: capitalize;
     color: var(--three-text-color);
 }
@@ -596,7 +515,6 @@ nav .thame-box button:first-child {
 
     .menu {
         display: flex;
-        width: 70vw;
         padding: 20px;
         position: fixed;
         z-index: 99;
@@ -612,18 +530,19 @@ nav .thame-box button:first-child {
     .container {
         display: grid;
         grid-template-areas: 'nav nav nav nav nav''as content content content m';
+        grid-template-columns: 1fr repeat(3, 1fr) .5fr;
     }
 
     .container nav {
         grid-area: nav;
     }
 
-    .container .page {
+    .container .pages {
         grid-area: m;
         height: 100%;
     }
 
-    .container .page .menu {
+    .container .pages .menu {
         margin: 0;
         padding: 10px;
         gap: 20px;
@@ -631,7 +550,7 @@ nav .thame-box button:first-child {
         top: 10px;
     }
 
-    .container .page .menu li {
+    .container .pages .menu li {
         display: flex;
         flex-direction: column;
         gap: 5px;
@@ -639,7 +558,7 @@ nav .thame-box button:first-child {
         justify-content: center;
     }
 
-    .container .page .menu li:not(:last-child) {
+    .container .pages .menu li:not(:last-child) {
         margin-bottom: 10px;
     }
 
@@ -688,11 +607,11 @@ nav .thame-box button:first-child {
         font-size: 0.8rem;
     }
 
-    .page-about .what-i-do .skills-grid {
+    .page .what-i-do .skills-grid {
         gap: 20px;
     }
 
-    .page-about .what-i-do .skills-grid .skill-card {
+    .page .what-i-do .skills-grid .skill-card {
         width: calc(50% - 20px);
     }
 }
@@ -704,8 +623,8 @@ nav .thame-box button:first-child {
 
     .menu {
         display: flex;
-        width: 90vw;
         padding: 20px;
+        width: fit-content;
         position: fixed;
         z-index: 99;
         bottom: -30px;

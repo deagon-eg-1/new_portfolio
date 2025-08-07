@@ -1,0 +1,201 @@
+/* start all style */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #1d4f81;
+    --main-text-color: #0a0908;
+    --sacnd-text-color: #c9c7c5;
+    --three-text-color: #6c757d;
+    --bg-card: #e9e9e9;
+    --bg-text: #ffffff;
+    --bg-main: linear-gradient(135deg, #ebe9e9 0%, #a8a4a4 100%)  ;
+    --shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    --over-lay-color: #c9c7c5;
+    --dark-color-main: #12304e;
+  }
+  
+  body.dark{
+  --dark-color-main: #233442;
+  --over-lay-color: #7e9cb4b4;
+}
+
+p, span , button {
+    font-family: "Poppins", sans-serif;
+}
+
+/* start secrion filter-item */
+
+.filter-item{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+.filter-item button {
+    padding: 5px 15px;
+    border: none;
+    background: var(--main-color);
+    color: var(--sacnd-text-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.4s ease;
+    font-size: .8rem;
+
+}
+.filter-item button:hover {
+    background: var(--dark-color-main);
+    color: #fff;
+  }
+  .filter-item button.active {
+    background: var(--dark-color-main);
+    color: #fff;
+}
+/* end secrion filter-item */
+
+/* Projects Masonry Layout */
+.projects-grid {
+  width: 100%;
+  column-count: 3;
+  column-gap: 20px;
+}
+
+.project-card {
+  width: 100%;
+  display: inline-block;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease;
+  background: var(--bg-card);
+  margin-bottom: 20px;
+}
+.project-card.hidden {
+  display: none;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+}
+
+.project-img {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Overlay on hover */
+.overlay {
+  position: absolute;
+  top: -150%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--over-lay-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: left;
+  transition: 0.7s ease;
+  padding: 10px;
+}
+.overlay h3{
+  font-weight: 600;
+  color: var(--main-text-color);
+  margin: 0;
+  font-size: 1.1rem;
+}
+.overlay p{
+  font-weight: 500;
+  color: var(--three-text-color);
+  font-size: .7rem;
+  line-height: 15px;
+  margin: 10px 0;
+}
+
+.project-img:hover .overlay {
+  top: 0;
+}
+
+/* Buttons inside overlay */
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  padding: 5px 5px;
+  background: var(--main-color);
+  color: var(--sacnd-text-color);
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: .8rem;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--dark-color-main);
+  color: var(--sacnd-text-color);
+}
+
+.project-name {
+  padding: 10px;
+  padding-left: 55px;
+  position: relative;
+  background-color: var(--bg-card);
+}
+.project-name i {
+  position: absolute;
+  content: "";
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  transform: translate(-50%, -50%);
+  font-size: .5rem;
+  color: var(--sacnd-text-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+ .project-name i.fa-arrows-rotate {
+  left: 40px;
+  top: 50%;
+}
+ .project-name i.fa-angle-left {
+  left: 18px;
+  top: 50%;
+}
+.project-name h4 {
+  padding: 3px;
+  padding-left: 10px;
+  font-weight: 500;
+  font-size: .7rem;
+  margin: 0;
+  color: var(--sacnd-text-color);
+  background: var(--main-color);
+  border-radius: 10px;
+}
+@media (max-width: 1200px){
+  .projects-grid {
+    column-count: 2;
+  }
+}
+@media (max-width: 620px){
+  .projects-grid {
+    column-count: 1;
+  }
+}
