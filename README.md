@@ -34,28 +34,6 @@ My focus areas:
 - **JavaScript**  
 - **Responsive Design**
 
----
-
-## 📂 Project Structure
-
-new_portfolio/
-│
-├── css/
-│
-├── img/
-│
-├── js/
-│
-├── index.html
-│
-├── work.html
-│
-├── contact.html
-│
-├── resume.html
-│
-└── mohanned-reda-cv.pdf
-
 
 ---
 
