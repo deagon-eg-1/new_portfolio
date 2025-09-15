@@ -1,28 +1,29 @@
 # 🌐 My Portfolio
 
-مرحبًا بك في البورتفوليو الخاص بي 👋  
-هنا هتلاقي أعمالي، مهاراتي، وأفكاري في تطوير الويب. صممته ليكون واجهة تعكس خبرتي وشغفي في بناء مواقع وتطبيقات حديثة.
+Welcome to my personal portfolio 👋  
+This project showcases my skills, projects, and ideas in web development. It is designed to reflect my passion for building modern, responsive, and user-friendly applications.
 
 ---
 
 ## 👨‍💻 About Me
 
-أنا **محمد رضا**، مطور ويب متخصص في **Back-End & Front-End**.  
-بحب أبني حلول برمجية عملية تساعد الناس في حياتهم اليومية، وأسعى دائمًا لتعلم تقنيات جديدة وتطوير نفسي.  
-شغلي بيركّز على:  
-- ✨ كتابة كود نظيف وسهل التطوير.  
-- 🚀 بناء مشاريع حقيقية بجودة عالية.  
-- 🤝 التعاون والعمل بروح الفريق.  
+I’m **Mohamed Reda**, a web developer specialized in **Back-End & Front-End**.  
+I love building real-world solutions that make people’s lives easier, and I’m always eager to learn new technologies and improve my craft.  
+
+My focus areas:  
+- ✨ Writing clean and maintainable code.  
+- 🚀 Building real-world, high-quality applications.  
+- 🤝 Collaborating effectively with teams.  
 
 ---
 
 ## ✨ Features
 
-- 🎨 تصميم عصري وجذاب.  
-- 📱 متجاوب مع جميع الشاشات (Mobile First).  
-- 🗂️ معرض أعمال لعرض المشاريع المنجزة.  
-- 📄 سيرة ذاتية قابلة للتحميل مباشرة.  
-- 📬 صفحة تواصل سهلة وسريعة.  
+- 🎨 Modern and attractive design.  
+- 📱 Fully responsive (Mobile First).  
+- 🗂️ Well-structured project showcase.  
+- 📄 Downloadable CV included.  
+- 📬 Easy-to-use contact page.  
 
 ---
 
@@ -37,13 +38,22 @@
 
 ## 📂 Project Structure
 
+new_portfolio/
+│
 ├── css/
+│
 ├── img/
+│
 ├── js/
+│
 ├── index.html
+│
 ├── work.html
+│
 ├── contact.html
+│
 ├── resume.html
+│
 └── mohanned-reda-cv.pdf
 
 
@@ -51,14 +61,19 @@
 
 ## 🌍 Live Demo
 
-👉 [شاهد البورتفوليو مباشرة](https://deagon-eg-1.github.io/new_portfolio/)
+👉 [View Portfolio Online](https://deagon-eg-1.github.io/new_portfolio/)
 
 ---
 
 ## 📞 Contact Me
 
-- 📱 الهاتف: **+201119302649**   
+- 💬 WhatsApp: [Chat with me](https://wa.me/201119302649)  
 - 🐙 GitHub: [deagon-eg-1](https://github.com/deagon-eg-1)
+
+---
+
+⭐ If you like this project, don’t forget to give it a **Star** on GitHub!
+
 
 ---
 
